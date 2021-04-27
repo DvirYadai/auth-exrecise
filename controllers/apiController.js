@@ -24,3 +24,19 @@ module.exports.information_get = async (req, res) => {
     }
   });
 };
+
+module.exports.users_get = async (req, res) => {
+  let token = req.get("Authorization").split(" ")[1];
+
+  if (!token) {
+    return res.status(401).send("Access Token Required");
+  }
+
+  jwt.verify(token, "asd2asdf3", async (err, decodedToken) => {
+    if (err) {
+      return res.status(403).send("Invalid Access Token");
+    } else {
+      return res.status(200).json(USERS);
+    }
+  });
+};

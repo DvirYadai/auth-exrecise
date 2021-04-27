@@ -111,3 +111,19 @@ module.exports.tokenValidate_post = async (req, res) => {
     }
   });
 };
+
+module.exports.logout_post = async (req, res) => {
+  const { token } = req.body;
+
+  if (!token) {
+    return res.status(400).send("Refresh Token Required");
+  }
+
+  jwt.verify(token, "asd2asdf3", async (err, decodedToken) => {
+    if (err) {
+      return res.status(400).send("Invalid Refresh Token");
+    } else {
+      return res.status(200).send("User Logged Out Successfully");
+    }
+  });
+};

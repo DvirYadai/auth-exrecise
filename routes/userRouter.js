@@ -6,5 +6,6 @@ router.post("/register", userController.register_post);
 router.post("/login", userController.login_post);
 router.post("/token", userController.token_post);
 router.post("/tokenValidate", userController.tokenValidate_post);
+router.post("/logout", userController.logout_post);
 
 module.exports = router;
