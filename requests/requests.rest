@@ -1,0 +1,21 @@
+POST http://localhost:3000/users/register
+content-type: application/json
+
+{
+  "email": "asd@gmail.com",
+  "name": "asd",
+  "password": "asdasd"
+}
+
+###
+POST http://localhost:3000/users/login
+content-type: application/json
+
+{
+    "email": "asd@gmail.com",
+    "password": "asdasd"
+}
+
+###
+GET http://localhost:3000/api/v1/information
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiYXNkQGdtYWlsLmNvbSIsIm5hbWUiOiJhc2QiLCJwYXNzd29yZCI6IiQyYiQxMCRoTGY4QmZXdWFJdFhZLmhWSnJkdDJPSkN5NHI5dlRUTWl1dlkuSHRCRzVaTXgzQjFIaHdENiIsImlzQWRtaW4iOmZhbHNlfSwiaWF0IjoxNjE5NDQ3NzI0LCJleHAiOjE2MTk0NDc3MzR9.ZhCfIIBBdixomDaxFkYhG6zKIKSEFx4VpcbcO1dl218"
